@@ -1,6 +1,7 @@
 import React from 'react';
 // Imported Components
 import Header from './components/Header'
+import Home from './components/Home'
 
 // Import Style
 
@@ -10,7 +11,7 @@ function App() {
   return (
     <div className="App">
         <Header/>
-      Start here.
+        <Home/>
         <GlobalStyle/>
     </div>
   );
