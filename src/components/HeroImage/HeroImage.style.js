@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
                  var(--darkGrey); 
   background-size: 100%, cover;
   background-repeat: no-repeat;
-  //background-position: ;
+  background-position: center;
   height: 100vh;
   position: relative;
   animation: animateHeroImage 1s;
@@ -37,13 +37,25 @@ export const Text = styled.div`
   z-index: 100;
   max-width: 700px;
   position: absolute;
-  bottom: 40px;
+  bottom: 130px;
   margin-right: 20px;
   min-height: 100px;
   color: var(--white);
 
   h1 {
     font-size: var(--fontSuperBig);
+    
+    @media screen and (max-width: 720px) {
+      font-size: var(--fontBig);
+    }
+  }
+  
+  p {
+    font-size: var(--fontMed);
+    
+    @media screen and (max-width: 720px) {
+      font-size: var(--fontSmall);
+  }
   }
 `;
 

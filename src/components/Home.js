@@ -1,16 +1,16 @@
 // Import the necessary tools and libraries
 import React, {useState, useEffect} from 'react';
-// API
-import API from  '../API';
 
 // Config
 import {POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL} from "../config";
 
 // Import the components
-import HeroImage from './HeroImage'
+import HeroImage from './HeroImage';
+import Grid from './Grid'
 
 // Import Hook
 import { useHomeFetch } from '../Hooks/useHomeFetch';
+
 // Import Images
 import NoImage from '../images/no_image.jpg'
 
@@ -19,7 +19,6 @@ const Home = () => {
 
     const { state, loading, error } = useHomeFetch();
 
-    console.log(state);
     return (
         <>
             { state.results[0] ?
@@ -30,6 +29,11 @@ const Home = () => {
                 : null
             }
 
+            <Grid header='Popular Movies'>
+                {state.results.map(movie => (
+                    <div key={movie.id}> {movie.title}</div>
+                     ))}
+            </Grid>
         </>
 
     )
