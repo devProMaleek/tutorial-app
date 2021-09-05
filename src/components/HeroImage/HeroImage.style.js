@@ -3,12 +3,13 @@ import styled from 'styled-components';
 
 // Export the wrapper/container
 export const Wrapper = styled.div`
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 41%, rgba(0, 0, 0, .65) 100%), url(${({ image }) => image}),
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 41%, 
+  rgba(0, 0, 0, .65) 100%), url(${({ image }) => image}),
                  var(--darkGrey); 
   background-size: 100%, cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 82vh;
   position: relative;
   animation: animateHeroImage 1s;
 
