@@ -17,7 +17,7 @@ export const useHomeFetch = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
-    console.log
+    
     const fetchMovies = async (page, searchTerm = "") => {
         try {
             // Update the error and loading state.
