@@ -32,7 +32,7 @@ export const useHomeFetch = () => {
                 results:
                     page > 1 ? [...prevState.results, ...movies.results] : [...movies.results]
             }));
-            // Error
+            // Error handling
         } catch (error) {
             setError(true)
         }
