@@ -29,6 +29,7 @@ const Movie = () => {
 
     if (loading) return <Spinner/>;
     if (error) return <div>Something went wrong...</div>
+    console.log(movie);
     return (
         <>
             <BreadCrumb movieTitle={movie.original_title}/>
@@ -41,9 +42,10 @@ const Movie = () => {
                     )
                 )}
             </Grid>
+
+
         </>
     );
-
 }
 
 export default Movie;
