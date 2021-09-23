@@ -1,5 +1,6 @@
 // Import the necessary libraries
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Import the style component.
 import { Wrapper, Image } from './Actor.styles';
@@ -12,6 +13,14 @@ const Actor = ({ name, character, imageUrl }) => (
         <p>{ character }</p>
     </Wrapper>
 )
+
+
+// Set PropTypes.
+Actor.propTypes = {
+    name: PropTypes.string,
+    character: PropTypes.string,
+    imageUrl: PropTypes.string,
+}
 
 // Export the component
 export default Actor;
