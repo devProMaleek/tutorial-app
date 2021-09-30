@@ -5,7 +5,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import searchIcon from '../../images/search-icon.svg';
 
 // Import the styles
-import { Wrapper, Content } from './SearchBar.styles'
+import { Wrapper, Content } from './SearchBar.styles';
+import PropTypes from 'prop-types';
 
 // Search Component
 const SearchBar = ({ setSearchTerm }) => {
@@ -29,6 +30,12 @@ const SearchBar = ({ setSearchTerm }) => {
             </Content>
         </Wrapper>
     )
+}
+
+// Validating Props
+
+SearchBar.propTypes = {
+    callback: PropTypes.func
 }
 
 // Export the component

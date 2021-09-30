@@ -1,5 +1,6 @@
 // Import the necessary libraries
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Import component
 import Thumb from '../Thumb';
@@ -42,6 +43,9 @@ const MovieInfo = ({ movie }) => (
 
 )
 
-
+// Validating props
+MovieInfo.propTypes = {
+    movie: PropTypes.object
+}
 // Export the component
 export default MovieInfo;
