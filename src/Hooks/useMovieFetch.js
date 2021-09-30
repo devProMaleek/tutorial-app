@@ -1,6 +1,7 @@
 // Import the necessary library
 import { useState, useEffect, useCallback } from 'react';
 import API from '../API';
+import { isPersistedState } from "../helpers";
 
 // Export useMovieFetch Hook.
 export const useMovieFetch = movieId => {
@@ -37,8 +38,21 @@ export const useMovieFetch = movieId => {
     // useEffect
     useEffect(() => {
 
+        // Create a session storage for each movie.
+        const sessionState = isPersistedState(movieId);
+
+        if (sessionState) {
+            setState(sessionState);
+            setLoading(false);
+            return;
+        }
         fetchMovie();
     }, [movieId])
 
+    // Write to session storage.
+    useEffect( () => {
+        sessionStorage.setItem(movieId, JSON.stringify(state));
+
+    }, [movieId, state])
     return { state, loading, error };
 }
