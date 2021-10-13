@@ -61,6 +61,7 @@ const Login = () => {
         <Wrapper>
             <label>Username:</label>
             <input type="text" value={username} name="username" onChange={handleInput}/>
+            <label>Password:</label>
             <input type="password" value={password} name='password' onChange={handleInput}/>
             <Button text='Login' callback={handleSubmit}/>
         </Wrapper>
