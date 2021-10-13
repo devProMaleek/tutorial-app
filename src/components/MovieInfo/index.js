@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Thumb from '../Thumb';
 
 // Import necessary files from config folder.
-import { IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE } from "../../config";
+import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 
 // NoImage
 import NoImage from '../../images/no_image.jpg';

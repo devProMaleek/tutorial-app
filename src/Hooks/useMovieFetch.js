@@ -47,7 +47,7 @@ export const useMovieFetch = movieId => {
             return;
         }
         fetchMovie();
-    }, [movieId])
+    }, [movieId, fetchMovie])
 
     // Write to session storage.
     useEffect( () => {
