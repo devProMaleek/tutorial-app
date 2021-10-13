@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // Import component
 import Thumb from '../Thumb';
+import Rate from '../Rate';
 
 // Import necessary files from config folder.
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
@@ -36,6 +37,10 @@ const MovieInfo = ({ movie }) => (
                             <p key={director.credit_id}>{director.name}</p>
                         ))}
                     </div>
+                </div>
+                <div>
+                    <p>Rate Movie</p>
+                    <Rate/>
                 </div>
             </Text>
         </Content>
